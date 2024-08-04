@@ -1,35 +1,28 @@
-import './app.css'  
-import {useState} from 'react';                     
-import Counter from './Counter';
+import React from 'react'
+import Card from "./Card_new";
+import Button from './button';
+import Student from './Student';
+import UserGreeting from './UserGreeting';
 
 function App() {
-  const [Count, setCount] = useState(0)
-  const [Minus, setMinus] = useState(10)
-
-    const addCount= ()=> {
-      setCount(Count+1)
-    }
-
-      const minusCount= ()=> {
-      setMinus(Minus-1)
-    }
-  return (
-    <div>
-      <button onClick={addCount}>
-        Add
-      </button>
-
-
-      <Counter Count={Count}/>
-
-
-      <button onClick={minusCount}>
-        Minus
-      </button>
-      <h1>Minus_Counter: {Minus}</h1>
-    </div>
+  return(
+    <>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Card/>
+    <Button/>
+    <Student name = 'Lijo' age={34} isStudent ={true}/>
+    <Student name = 'Reshma' age={27} isStudent ={false}/>
+    <Student name = 'Sijo' age={24} isStudent={true}/>
+    <Student name = 'Amal'/>
+    <UserGreeting isLoggedIn={false} username='To React Devloper Tutorial'/>
+    </>
   );
 }
-export const use='a'
 export default App;
+
+
+
 
